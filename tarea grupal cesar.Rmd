@@ -1,0 +1,144 @@
+---
+title: "TAREA GRPO 19"
+author: "ALVAREZ, SANCHEZ , TORRES"
+date: "18/11/2021"
+output: github_document
+---
+
+## PARTE 2
+# 1
+```{r}
+x<- 1:10
+y<- c(1,4,6,8,25,36,49,61,81,100)
+plot(x,y)
+```
+
+# 2
+```{r}
+x<-c(seq(1,4),seq(2,8,2),seq(3,12,3))
+da<-matrix(x,4,3)
+da
+```
+
+# 3
+```{r}
+a<-c(1,0,0)
+b<-c(0,1,0)
+c<-c(0,0,1)
+Matriz_identidad<-cbind(a,b,c)
+Matriz_identidad 
+```
+
+# 4
+```{r}
+rep(0,16)
+matrix(rep(0,16),ncol=4)
+```
+
+# 5
+```{r}
+ga<-diag(4)
+ge<-cbind(c(-1,0,0,0),c(0,1,0,0),c(0,0,2,0),c(0,0,0,3))
+de<-ga+ge
+de
+```
+
+# 6
+```{r}
+da
+trans<-t(da) 
+trans
+```
+
+# 7
+```{r}
+A<-matrix(c(1,2,3,4,2,4,6,8,3,6,9,12,0,0,0,0), nrow = 4 , ncol = 4)
+B<-matrix(c(0,0,0,0,2,0,0,0,0,3,0,0,0,0,0,4),ncol=4)
+(A+B)
+(A-B)
+(3*B)
+(A%*%B)
+```
+
+
+# 9
+```{r}
+a1<-c(3,9,3)
+a2<-c(-1,-2,1)
+a3<-c(1,1,-2)
+A<-cbind(a1,a2,a3)
+A
+t(A)
+d<-solve(A)
+d
+q<-c(-1,-9,-9)
+jaa<-matrix(q,ncol=1)
+d%*%jaa 
+```
+
+# 10
+```{r}
+# eigen(): 
+# det(): Se usa para hallar la determinante de una matriz
+```
+
+# 11
+```{r}
+v<-c(1:10)
+2*v
+aea<-c(v,2*v,3*v,4*v,5*v)
+B<-matrix(aea,10)
+B
+ya<-c(0,1,0,0,1,1,0,1,1,0,0,1,0,0,1,1,0,1,0,1,0,1,0,1,0)
+A<-matrix(ya,5)
+A
+t(A)
+B%*%A 
+B%*%t(A)
+B%*%A - B%*%t(A)
+```
+
+# 12
+```{r}
+q<-c(1,1,1,1,1,1,-1,0,1,2)
+X<-matrix(q,5)
+w<-c(0,0,1,1,3)
+
+Y<-matrix(w,5)
+XT<-t(X)
+uwu<-(XT%*%X)
+unu<-solve(uwu)
+RAA<-unu%*%XT
+RAA%*%Y
+```
+
+# 13
+```{r}
+data(co2)
+means = aggregate(co2, FUN=mean)
+year = as.vector(time(means))
+co2 = as.vector(means)
+```
+
+# 13.a
+```{r}
+diff(co2)
+```
+
+# 13.b
+```{r}
+y<-c(0, diff(co2))
+x<-year
+plot(x,y,xlab="Años",ylab="Variación de CO2",type="o",pch=20, font=2,main= "Diferencias de CO2 en el tiempo")
+```
+
+# 14
+```{r}
+rainfall<-read.csv("C:/Users/w10/Downloads/rainfall.csv")
+rainfall
+View(rainfall)
+meses<-rainfall[(rainfall$sep>180)|(rainfall$oct>180)|(rainfall$nov>180)|(rainfall$dec>180)|
+                  (rainfall$jan>180)|(rainfall$feb>180)|(rainfall$mar>180)|(rainfall$apr>180)|(rainfall$may>180),]
+View(meses)
+meses$name
+```
