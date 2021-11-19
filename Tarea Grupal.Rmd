@@ -1,0 +1,254 @@
+---
+title: "Tarea grupal"
+author: "Jesus Torres, Manuel Alvarez y Cesar Sanchez"
+date: "18/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+#Ejercicio 1.a
+a = 0.3*0.15
+b = 0.3*0.15+0.2*0.8+0.5*0.12
+a/b
+#Ejercicio 1.b
+m <- (5^6)
+n <- (factorial(6))
+p <- (exp(-5))
+m*p/n
+#Ejercicio 1.c
+x <- factorial(20)/(factorial(13)*factorial(7))
+y <- 0.4^7*0.6^13
+x*y
+#Ejercicio 2.a
+sum(1:1000)
+#Ejercicio 2.b
+a<- (1-2**11)/-1
+a
+#Ejercicio 3.a
+a<-grupo
+length(a)
+#Ejercicio 3b
+which(a=="A")
+
+#Ejercicio 4a
+sum(nota)
+#Ejercicio 4b
+mean(nota)
+#Ejercicio 4c
+jaa<-nota
+which(jaa>7.0)
+#Ejercicio 4d
+sort(nota,decreasing=TRUE)
+order(nota,decreasing=TRUE)
+#Ejercicio 4e
+max(nota)
+which(nota==7.7)
+max(which(nota==7.7))
+
+#Ejercicio 5a
+sum(head(nota,10L))
+#Ejercicio 5b
+q<-which(a=="C")
+length(q)
+#Ejercicio 5c
+ya<-which(nota>5.4)
+length(ya)
+#Ejercicio 5d
+posB<-which(grupo=="B")
+notB<-nota[c(posB)]
+length(which(notB>5.4))
+#Ejercicio 5e
+posC<-which(grupo=="C")
+notC<-nota[c(posC)]
+  length(which(notC>5.4))
+length(posC)
+aprobados:20
+total: 39
+"%"<-20*100/39
+#Ejercicio 5f
+which.max(nota)
+which.min(nota)
+grupo[120]
+grupo[142]
+#Ejercicio 5g
+posA<-which(grupo=="A")
+notA<-nota[c(posA)]
+posAA<-which(notA>5.4)
+AA<-notA[c(posAA)]
+mean(AA)
+
+posB<-which(grupo=="B")
+notB<-nota[c(posB)]
+posBB<-which(notB>5.4)
+BA<-notB[c(posBB)]
+mean(BA)
+
+#Ejercicio 6
+q66TA<-quantile(nota, 0.66)
+quantile(notC,0.66)
+
+#Ejercicio 7
+length(which(nota<=4.9))
+q<-nota
+nota[nota<=4.9]
+"%=<4.9"=90*100/192
+"%>=4.9"=100-(90*100/192)
+
+#Ejercicio 8
+
+banco<-data.frame(grupo, nota)
+ boxplot(formula=nota~grupo,data=banco)
+ 
+ #Ejercicio 9
+max(conc)   #9.a
+length(conc[conc>40.0])   #9.b
+mean(conc)     #9.c
+head(sort(conc),10)     #9.d
+ tiempo
+
+  #9.e
+ max(conc)
+ which(conc==max(conc))
+ #142 es el máximo
+ 288/(24*60)
+ (83-8)/90*60
+ 50 
+ 
+ 
+#PARTE 2
+ #Ejercicio 1.1
+  x<- 1:10
+ y<- c(1,4,6,8,25,36,49,61,81,100)
+ plot(x,y)
+ 
+ #Ejercicio 2
+ x<-c(seq(1,4),seq(2,8,2),seq(3,12,3))
+ da<-matrix(x,4,3)
+ da
+
+ #Ejercicio 3
+ a<-c(1,0,0)
+ b<-c(0,1,0)
+ c<-c(0,0,1)
+ Matriz_identidad<-cbind(a,b,c)
+Matriz_identidad 
+
+#Ejercicio 4
+rep(0,16)
+matrix(rep(0,16),ncol=4)
+
+#Ejercicio 5
+ga<-diag(4)
+ge<-cbind(c(-1,0,0,0),c(0,1,0,0),c(0,0,2,0),c(0,0,0,3))
+de<-ga+ge
+de
+
+#Ejercicio 6
+da
+trans<-t(da) 
+ trans
+ 
+ #Ejercicio 7
+ A<-matrix(c(1,2,3,4,2,4,6,8,3,6,9,12,0,0,0,0), nrow = 4 , ncol = 4)
+ B<-matrix(c(0,0,0,0,2,0,0,0,0,3,0,0,0,0,0,4),ncol=4)
+ (A+B)
+ (A-B)
+ (3*B)
+ (A%*%B)
+
+ #Ejercicio 8
+ P<- cbind(c(1,2,3),c(-2,4,-2),c(3,-2,1))
+ Potencia_6<-function(x){x**6}
+
+ #Ejercicio 9
+ a1<-c(3,9,3)
+ a2<-c(-1,-2,1)
+ a3<-c(1,1,-2)
+ A<-cbind(a1,a2,a3)
+ A
+t(A)
+ d<-solve(A)
+ d
+q<-c(-1,-9,-9)
+ jaa<-matrix(q,ncol=1)
+d%*%jaa 
+
+#Ejercicio 10
+# eigen(): 
+# det(): Se usa para hallar la determinante de una matriz
+
+#Ejercicio 11
+v<-c(1:10)
+2*v
+aea<-c(v,2*v,3*v,4*v,5*v)
+B<-matrix(aea,10)
+B
+ya<-c(0,1,0,0,1,1,0,1,1,0,0,1,0,0,1,1,0,1,0,1,0,1,0,1,0)
+A<-matrix(ya,5)
+A
+t(A)
+B%*%A 
+B%*%t(A)
+B%*%A - B%*%t(A)
+
+#Ejercicio 12
+q<-c(1,1,1,1,1,1,-1,0,1,2)
+X<-matrix(q,5)
+w<-c(0,0,1,1,3)
+
+Y<-matrix(w,5)
+XT<-t(X)
+uwu<-(XT%*%X)
+unu<-solve(uwu)
+RAA<-unu%*%XT
+RAA%*%Y
+
+#Ejercicio 13
+data(co2)
+means = aggregate(co2, FUN=mean)
+year = as.vector(time(means))
+co2 = as.vector(means)
+
+#13.a
+diff(co2)
+#13.b
+y<-c(0, diff(co2))
+x<-year
+plot(x,y,xlab="Años",ylab="Variación de CO2",type="o",pch=20, font=2,main= "Diferencias de CO2 en el tiempo")
+
+#13.c
+plot(x,y,xlim=c(1959,2020),xlab="Años",ylab="Variación de CO2",type="o",pch=20, font=2,main= "Diferencias de CO2 en el tiempo")
+points(2020,y=2.64,col="red",pch=4)
+
+#Ejercicio 14
+rainfall<-read.csv("C:/Users/Nitro 5}/Downloads/rainfall.csv")
+rainfall
+View(rainfall)
+meses<-rainfall[(rainfall$sep>180)|(rainfall$oct>180)|(rainfall$nov>180)|(rainfall$dec>180)|
+                  (rainfall$jan>180)|(rainfall$feb>180)|(rainfall$mar>180)|(rainfall$apr>180)|(rainfall$may>180),]
+View(meses)
+meses$name
+
